@@ -1,4 +1,4 @@
-
+let score = 0;
 let Name = prompt('what is your name ?');
 alert('welcome' + ' ' + Name + ' ' + 'in our page');
 
@@ -7,6 +7,7 @@ tea = tea.toLocaleLowerCase();
 
 if (tea === 'yes' || tea === 'y') {
   alert('enjoy with drink tea');
+  score++;
   //console.log('enjoy with drink tea');
 
 }
@@ -25,6 +26,7 @@ let coffie = prompt('do you love coffie? you must write YES ,Y,NO,N all of them 
 if (coffie === 'YES' || coffie === 'Y') {
   alert('enjoy with drink coffie');
   console.log('enjoy with drink coffie');
+  score++;
 } else {
   if (coffie === 'No' || coffie === 'N') {
     alert('your lose');
@@ -40,6 +42,7 @@ friend = friend.toLocaleLowerCase();
 
 if (friend === 'yes' || friend === 'y') {
   alert('thank you bro ,it is my pleasure');
+  score++;
   //console.log('thank you bro ,it is my pleasure');
 }
 else {
@@ -58,6 +61,7 @@ rich = rich.toLocaleLowerCase();
 
 if (rich === 'yes' || rich === 'y') {
   alert('thank you bro, i wish will become rich man allso');
+  score++;
   // console.log('thank you bro, i wish will become rich man allso');
 
 }
@@ -65,6 +69,7 @@ else {
   if (rich === 'no' || rich === 'n') {
     alert('why you carry negative feel?!');
     console.log('why you carry negative feel?!');
+
   } else {
     alert(' your answer must be yes or no   ');
     //console.log(' your answer must be yes or no');
@@ -78,6 +83,7 @@ good = good.toLocaleLowerCase();
 
 if (good === 'yes' || good === 'y') {
   alert('that is great');
+  score++;
   //console.log('that is great');
 
 }
@@ -93,9 +99,58 @@ else {
 
 alert('Than you ' + ' ' + Name + ' ' + 'to visit my page');
 
+let guss = 0;
+let gussNumber;
 
 
+while (guss < 4) {
+  gussNumber = prompt('guss number');
+  if (gussNumber > 5) {
+    alert('too high');
+  }
+  else if (gussNumber < 5) {
+    alert('too low');
+  }
+  else if (gussNumber === '5') {
+    alert('corecct answer');
+    score++;
+    break;
+  }
 
+  ++guss;
 
+}
 
+let arr = ['coffie', 'tea', 'water', 'juice', 'moka', 'milk'];
+let num = 0;
+let gussdrink;
+
+while (num < 6) {
+  gussdrink = prompt('What my favorite drink?','milk,tea,water,coffie,juice');
+
+  if (gussdrink === arr[1]) {
+    alert('corect answer,my favorite drink is tea ');
+    score++;
+    break;
+  }
+  else if (gussdrink === arr[0]) {
+    alert(' corect answer,my favorite drink is coffie ');
+    score++;
+    break;
+  }
+  else if (gussdrink === arr[2]) {
+    alert('it is not my favorite drink');
+  }
+  else if (gussdrink === arr[3]) {
+    alert('it is not my favorite drink');
+  }
+  else if (gussdrink === arr[4]) {
+    alert('it is not my favorite drink');
+  }
+  else if (gussdrink === arr[5]) {
+    alert('it is not my favorite drink');
+    ++num;
+  }
+}
+alert('your result is ' + score + ' out of 7');
 
