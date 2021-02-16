@@ -126,7 +126,7 @@ let num = 0;
 let gussdrink;
 
 while (num < 6) {
-  gussdrink = prompt('What my favorite drink?','milk,tea,water,coffie,juice');
+  gussdrink = prompt('What my favorite drink?', 'milk,tea,water,coffie,juice');
 
   if (gussdrink === arr[1]) {
     alert('corect answer,my favorite drink is tea ');
