@@ -1,3 +1,4 @@
+'use strict';
 let score = 0;
 let Name = prompt('what is your name ?');
 alert('welcome' + ' ' + Name + ' ' + 'in our page');
