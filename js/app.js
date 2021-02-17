@@ -1,157 +1,162 @@
 'use strict';
 let score = 0;
+let myTea;
+let myCoffee;
+let myAge;
+let rich;
+let good;
 let Name = prompt('what is your name ?');
 alert('welcome' + ' ' + Name + ' ' + 'in our page');
-
-let tea = prompt('do you love tea?', 'yes,no');
-tea = tea.toLocaleLowerCase();
-
-if (tea === 'yes' || tea === 'y') {
-  alert('enjoy with drink tea');
-  score++;
-  //console.log('enjoy with drink tea');
-
-}
-else {
-  if (tea === 'no' || tea === 'n') {
-    alert('your lose');
-    console.log('your lose');
-  } else {
-    alert(' your answer must be yes or no   ');
-    console.log(' your answer must be yes or no');
-  }
-}
-
-let coffie = prompt('do you love coffie? you must write YES ,Y,NO,N all of them capital letter', 'yes,no');
-
-if (coffie === 'YES' || coffie === 'Y') {
-  alert('enjoy with drink coffie');
-  console.log('enjoy with drink coffie');
-  score++;
-} else {
-  if (coffie === 'No' || coffie === 'N') {
-    alert('your lose');
-    // console.log('your lose');
-  } else {
-    alert('your answer must be YES or NO ');
-    console.log('your answer must be YES or NO');
-  }
-}
-
-let friend = prompt('can you become my friend ?', 'yes,no');
-friend = friend.toLocaleLowerCase();
-
-if (friend === 'yes' || friend === 'y') {
-  alert('thank you bro ,it is my pleasure');
-  score++;
-  //console.log('thank you bro ,it is my pleasure');
-}
-else {
-  if (friend === 'no' || friend === 'n') {
-    alert('your lose ');
-    console.log('your lose');//don not delet console.log
-  } else {
-    alert(' your answer must be yes or no   ');
-    console.log(' your answer must be yes or no');
-  }
-}
-
-
-let rich = prompt('do you thing i wiil become rich man ?', 'yes,no,y,n');
-rich = rich.toLocaleLowerCase();
-
-if (rich === 'yes' || rich === 'y') {
-  alert('thank you bro, i wish will become rich man allso');
-  score++;
-  // console.log('thank you bro, i wish will become rich man allso');
-
-}
-else {
-  if (rich === 'no' || rich === 'n') {
-    alert('why you carry negative feel?!');
-    console.log('why you carry negative feel?!');
-
-  } else {
-    alert(' your answer must be yes or no   ');
-    //console.log(' your answer must be yes or no');
-  }
-}
-
-
-
-let good = prompt('are you good man  ?', 'yes,no,y,n');
-good = good.toLocaleLowerCase();
-
-if (good === 'yes' || good === 'y') {
-  alert('that is great');
-  score++;
-  //console.log('that is great');
-
-}
-else {
-  if (good === 'no' || good === 'n') {
-    alert('i wish become good man ');
-    console.log('i wish become good man');
-  } else {
-    alert(' your answer must be yes or no   ');
-    //console.log(' your answer must be yes or no');
-  }
-}
-
-alert('Than you ' + ' ' + Name + ' ' + 'to visit my page');
-
-let guss = 0;
-let gussNumber;
-
-
-while (guss < 4) {
-  gussNumber = prompt('guss number');
-  if (gussNumber > 5) {
-    alert('too high');
-  }
-  else if (gussNumber < 5) {
-    alert('too low');
-  }
-  else if (gussNumber === '5') {
-    alert('corecct answer');
+const questionTea = function () {
+  myTea = prompt('Do I love tea?', 'yes,no');
+  myTea = myTea.toLocaleLowerCase();
+  if (myTea === 'yes' || myTea === 'y') {
+    alert('correct answer!');
     score++;
-    break;
+    //console.log('enjoy with drink myTea');
   }
-
-  ++guss;
-
-}
-
-let arr = ['coffie', 'tea', 'water', 'juice', 'moka', 'milk'];
-let num = 0;
-let gussdrink;
-
-while (num < 6) {
-  gussdrink = prompt('What my favorite drink?', 'milk,tea,water,coffie,juice');
-
-  if (gussdrink === arr[1]) {
-    alert('corect answer,my favorite drink is tea ');
+  else {
+    if (myTea === 'no' || myTea === 'n') {
+      alert('Wrong answer!');
+      //console.log('Wrong answer!');
+    } else {
+      alert(' your answer must be yes or no   ');
+      //console.log(' your answer must be yes or no');
+    }
+  }
+};
+const questionCoffee = function () {
+  myCoffee = prompt('Do I love Coffee? you must write YES ,Y,NO,N all of them capital letter', 'yes,no');
+  if (myCoffee === 'YES' || myCoffee === 'Y') {
+    alert('Correct answer!');
+    //console.log('enjoy with drink coffee');
     score++;
-    break;
+  } else {
+    if (myCoffee === 'No' || myCoffee === 'N') {
+      alert('Wrong answer!');
+      // console.log('Wrong answer!');
+    } else {
+      alert('your answer must be YES or NO ');
+      //console.log('your answer must be YES or NO');
+    }
   }
-  else if (gussdrink === arr[0]) {
-    alert(' corect answer,my favorite drink is coffie ');
+};
+const questionAge = function () {
+  myAge = prompt('Am I 25 years old?', 'yes,no');
+  myAge = myAge.toLocaleLowerCase();
+  if (myAge === 'yes' || myAge === 'y') {
+    alert('Wrong answer!');
+    //console.log('Wrong answer');
+  }
+  else {
+    if (myAge === 'no' || myAge === 'n') {
+      alert('Correct answer! ');
+      //console.log('Correct answer!');
+      score++;
+    } else {
+      alert(' your answer must be yes or no   ');
+      //console.log(' your answer must be yes or no');
+    }
+  }
+};
+const questionRich = function () {
+  rich = prompt('Am I a rich man?', 'yes,no,y,n');
+  rich = rich.toLocaleLowerCase();
+  if (rich === 'yes' || rich === 'y') {
+    alert('Wrong answer!');
+    // console.log('Wrong answer!');
+  }
+  else {
+    if (rich === 'no' || rich === 'n') {
+      alert('Correct answer!');
+      console.log('Correct answer!');
+      score++;
+    } else {
+      alert(' your answer must be yes or no   ');
+      //console.log(' your answer must be yes or no');
+    }
+  }
+};
+const questionGood = function () {
+  good = prompt('Am I a good man?', 'yes,no,y,n');
+  good = good.toLocaleLowerCase();
+  if (good === 'yes' || good === 'y') {
+    alert('Correct answer!');
     score++;
-    break;
+    //console.log('Correct answer!');
   }
-  else if (gussdrink === arr[2]) {
-    alert('it is not my favorite drink');
+  else {
+    if (good === 'no' || good === 'n') {
+      alert('Wrong answer!');
+      //console.log('Wrong answer!');
+    } else {
+      alert(' your answer must be yes or no   ');
+      //console.log(' your answer must be yes or no');
+    }
   }
-  else if (gussdrink === arr[3]) {
-    alert('it is not my favorite drink');
+};
+const questionNumber = function () {
+  let guss = 0;
+  let gussNumber;
+  while (guss < 4) {
+    gussNumber = prompt('guss number');
+    if (gussNumber > 5) {
+      alert('too high');
+    }
+    else if (gussNumber < 5) {
+      alert('too low');
+    }
+    else if (gussNumber === '5') {
+      alert('corecct answer');
+      score++;
+      break;
+    }
+    if (guss === 3) {
+      alert('Sorry, you couldnt guess the number, it was 5');
+    }
+    ++guss;
   }
-  else if (gussdrink === arr[4]) {
-    alert('it is not my favorite drink');
+};
+const questionDrink = function () {
+  let arr = ['coffee', 'tea', 'water', 'juice', 'moka', 'milk'];
+  let num = 0;
+  let gussdrink;
+  while (num < 6) {
+    gussdrink = prompt('What my favorite drink?', 'milk,tea,water,coffee,juice');
+    if (gussdrink === arr[1]) {
+      alert('corect answer,my favorite drink is tea ');
+      score++;
+      break;
+    }
+    else if (gussdrink === arr[0]) {
+      alert(' corect answer,my favorite drink is coffee ');
+      score++;
+      break;
+    }
+    else if (gussdrink === arr[2]) {
+      alert('it is not my favorite drink');
+    }
+    else if (gussdrink === arr[3]) {
+      alert('it is not my favorite drink');
+    }
+    else if (gussdrink === arr[4]) {
+      alert('it is not my favorite drink');
+    }
+    else if (gussdrink === arr[5]) {
+      alert('it is not my favorite drink');
+    }
+    if (num === 5) {
+      alert('Sorry, you couldnt guess my favorite drinks, it tea and coffee!');
+    }
+    num++;
   }
-  else if (gussdrink === arr[5]) {
-    alert('it is not my favorite drink');
-    ++num;
-  }
-}
+};
+questionTea();
+questionCoffee();
+questionAge();
+questionRich();
+questionGood();
+questionNumber();
+questionDrink();
 alert('your result is ' + score + ' out of 7');
-
+alert('Thank you ' + ' ' + Name + ' ' + 'to visit my page');
