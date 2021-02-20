@@ -26,12 +26,12 @@ border: 4px solid burlywood;
 h3:nth-child(even){
     
     background-color:black ;
-    border: 3px solid  ;
+    border: 3px solid burlywood  ;
     
     
 }
 h3:nth-child(odd){
-   border: 3px solid;
+   border: 3px solid burlywood;
    
 }
 h3{
