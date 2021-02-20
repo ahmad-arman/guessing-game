@@ -13,15 +13,15 @@ const questionTea = function () {
   if (myTea === 'yes' || myTea === 'y') {
     alert('correct answer!');
     score++;
-    //console.log('enjoy with drink myTea');
+
   }
   else {
     if (myTea === 'no' || myTea === 'n') {
       alert('Wrong answer!');
-      //console.log('Wrong answer!');
+
     } else {
       alert(' your answer must be yes or no   ');
-      //console.log(' your answer must be yes or no');
+
     }
   }
 };
@@ -29,15 +29,15 @@ const questionCoffee = function () {
   myCoffee = prompt('Do I love Coffee? you must write YES ,Y,NO,N all of them capital letter', 'yes,no');
   if (myCoffee === 'YES' || myCoffee === 'Y') {
     alert('Correct answer!');
-    //console.log('enjoy with drink coffee');
+
     score++;
   } else {
     if (myCoffee === 'No' || myCoffee === 'N') {
       alert('Wrong answer!');
-      // console.log('Wrong answer!');
+
     } else {
       alert('your answer must be YES or NO ');
-      //console.log('your answer must be YES or NO');
+
     }
   }
 };
@@ -46,16 +46,16 @@ const questionAge = function () {
   myAge = myAge.toLocaleLowerCase();
   if (myAge === 'yes' || myAge === 'y') {
     alert('Wrong answer!');
-    //console.log('Wrong answer');
+
   }
   else {
     if (myAge === 'no' || myAge === 'n') {
       alert('Correct answer! ');
-      //console.log('Correct answer!');
+
       score++;
     } else {
       alert(' your answer must be yes or no   ');
-      //console.log(' your answer must be yes or no');
+
     }
   }
 };
@@ -64,7 +64,7 @@ const questionRich = function () {
   rich = rich.toLocaleLowerCase();
   if (rich === 'yes' || rich === 'y') {
     alert('Wrong answer!');
-    // console.log('Wrong answer!');
+
   }
   else {
     if (rich === 'no' || rich === 'n') {
@@ -73,7 +73,7 @@ const questionRich = function () {
       score++;
     } else {
       alert(' your answer must be yes or no   ');
-      //console.log(' your answer must be yes or no');
+
     }
   }
 };
@@ -83,23 +83,25 @@ const questionGood = function () {
   if (good === 'yes' || good === 'y') {
     alert('Correct answer!');
     score++;
-    //console.log('Correct answer!');
+
   }
   else {
     if (good === 'no' || good === 'n') {
       alert('Wrong answer!');
-      //console.log('Wrong answer!');
+
     } else {
       alert(' your answer must be yes or no   ');
-      //console.log(' your answer must be yes or no');
+
     }
   }
 };
 const questionNumber = function () {
   let guss = 0;
   let gussNumber;
-  while (guss < 4) {
+  while (guss < 4 && gussNumber !== Text) {
     gussNumber = prompt('guss number');
+
+
     if (gussNumber > 5) {
       alert('too high');
     }
@@ -121,7 +123,7 @@ const questionDrink = function () {
   let arr = ['coffee', 'tea', 'water', 'juice', 'moka', 'milk'];
   let num = 0;
   let gussdrink;
-  while (num < 6) {
+  while (num < 6 && (arr[0] === 'coffee' || arr[1] === 'tea' || arr[2] === 'water' || arr[3] === 'juice' || arr[4] === 'moka' || arr[5] === 'milk')) {
     gussdrink = prompt('What my favorite drink?', 'milk,tea,water,coffee,juice');
     if (gussdrink === arr[1]) {
       alert('corect answer,my favorite drink is tea ');
@@ -160,3 +162,7 @@ questionNumber();
 questionDrink();
 alert('your result is ' + score + ' out of 7');
 alert('Thank you ' + ' ' + Name + ' ' + 'to visit my page');
+
+
+
+
